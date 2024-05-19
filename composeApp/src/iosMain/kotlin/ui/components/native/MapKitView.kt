@@ -12,8 +12,10 @@ internal fun MapKitView(
     placeName: String,
     coordinate: MapCoordinates
 ) {
+    val factory = LocalNativeViewFactory.current
+
     UIKitViewController(
         modifier = modifier,
-        factory = { TODO("Call view controller factory") },
+        factory = { factory.createMapView(placeName, coordinate) },
     )
 }

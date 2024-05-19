@@ -5,8 +5,14 @@ import androidx.compose.ui.Modifier
 import data.MapCoordinates
 
 @Composable
-expect fun MapView(
+actual fun MapView(
     modifier: Modifier,
     placeName: String,
-    coordinate: MapCoordinates,
-)
+    coordinate: MapCoordinates
+) {
+    MapKitView(
+        modifier = modifier,
+        placeName = placeName,
+        coordinate = coordinate,
+    )
+}

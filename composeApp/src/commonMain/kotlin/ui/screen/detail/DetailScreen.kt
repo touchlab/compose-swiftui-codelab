@@ -24,6 +24,7 @@ import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.core.screen.Screen
 import data.Restaurant
 import ui.components.Label
+import ui.components.native.MapView
 
 data class DetailScreen(
     private val restaurant: Restaurant
@@ -52,12 +53,12 @@ data class DetailScreen(
 
             Spacer(Modifier.height(12.dp))
 
-//            MapView(
-//                modifier = Modifier.fillMaxWidth()
-//                    .height(200.dp),
-//                placeName = restaurant.name,
-//                coordinate = restaurant.location,
-//            )
+            MapView(
+                modifier = Modifier.fillMaxWidth()
+                    .height(200.dp),
+                placeName = restaurant.name,
+                coordinate = restaurant.location,
+            )
         }
     }
 }
