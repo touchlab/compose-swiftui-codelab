@@ -14,10 +14,11 @@ class iOSNativeViewFactory : NativeViewFactory {
         return UIHostingController(rootView: mapView)
     }
 
-//    func createListScreenView(
-//        listViewModel: ListViewModel,
-//        onRestaurantClick: @escaping (Restaurant) -> Void
-//    ) -> UIViewController {
-//
-//    }
+    func createListScreenView(
+        listViewModel: ListViewModel,
+        onRestaurantClick: @escaping (Restaurant) -> Void
+    ) -> UIViewController {
+        let listScreenView = ListScreenContentView(viewModel: listViewModel, onRestaurantClick: onRestaurantClick)
+        return UIHostingController(rootView: listScreenView)
+    }
 }

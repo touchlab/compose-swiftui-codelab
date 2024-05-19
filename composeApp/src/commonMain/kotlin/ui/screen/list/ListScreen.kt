@@ -49,7 +49,14 @@ class ListScreen : Screen {
 }
 
 @Composable
-internal fun ListScreenContent(
+internal expect fun ListScreenContent(
+    modifier: Modifier,
+    viewModel: ListViewModel,
+    onRestaurantClick: (Restaurant) -> Unit
+)
+
+@Composable
+internal fun ListScreenContentCompose(
     modifier: Modifier,
     viewModel: ListViewModel,
     onRestaurantClick: (Restaurant) -> Unit

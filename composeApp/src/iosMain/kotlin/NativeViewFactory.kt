@@ -9,8 +9,8 @@ interface NativeViewFactory {
         coordinate: MapCoordinates
     ): UIViewController
 
-//    fun createListScreenView(
-//        listViewModel: ListViewModel,
-//        onRestaurantClick: (Restaurant) -> Unit
-//    ): UIViewController
+    fun createListScreenView(
+        listViewModel: ListViewModel,
+        onRestaurantClick: (Restaurant) -> Unit
+    ): UIViewController
 }
