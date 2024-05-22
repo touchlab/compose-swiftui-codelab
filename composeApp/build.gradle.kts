@@ -135,3 +135,9 @@ android {
 secrets {
     propertiesFileName = "gradle.properties"
 }
+
+skie {
+    features {
+        enableSwiftUIObservingPreview = true
+    }
+}

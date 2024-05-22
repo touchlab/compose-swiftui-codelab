@@ -49,6 +49,6 @@ maps-playService = { module = "com.google.android.gms:play-services-maps", versi
 jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 androidApplication = { id = "com.android.application", version.ref = "agp" }
-skie = { id = "co.touchlab.skie", version = "0.6.2" }
+skie = { id = "co.touchlab.skie", version = "0.8.0" }
 maps = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version = "2.0.1" }
 kotlinxSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
