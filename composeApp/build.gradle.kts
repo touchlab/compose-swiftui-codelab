@@ -53,17 +53,13 @@ kotlin {
             implementation(libs.voyager.tabNavigator)
             implementation(libs.voyager.bottomSheetNavigator)
             implementation(libs.voyager.model)
-
-            implementation(libs.coil.core)
-            implementation(libs.coil.ktor)
-            implementation(libs.coil.compose)
+            implementation(libs.voyager.lifecycleKmp)
 
             implementation(libs.ktxSerialization.json)
 
             implementation(libs.ktor.core)
 
             implementation(libs.androidx.lifecycle.viewmodel.compose)
-            implementation(libs.androidx.navigation.compose)
         }
 
         iosMain.dependencies {

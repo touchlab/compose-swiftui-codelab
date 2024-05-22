@@ -12,26 +12,17 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.CompositionLocalProvider
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.lifecycle.ViewModelStore
-import androidx.lifecycle.ViewModelStoreOwner
-import androidx.lifecycle.viewmodel.compose.LocalViewModelStoreOwner
-import cafe.adriel.voyager.core.lifecycle.LocalNavigatorScreenLifecycleProvider
-import cafe.adriel.voyager.core.lifecycle.NavigatorScreenLifecycleProvider
-import cafe.adriel.voyager.core.lifecycle.ScreenLifecycleContentProvider
-import cafe.adriel.voyager.core.model.ScreenModel
-import cafe.adriel.voyager.core.model.rememberScreenModel
-import cafe.adriel.voyager.core.screen.Screen
+import cafe.adriel.voyager.core.annotation.ExperimentalVoyagerApi
+import cafe.adriel.voyager.jetpack.ProvideNavigatorLifecycleKMPSupport
 import cafe.adriel.voyager.navigator.Navigator
 import cafe.adriel.voyager.transitions.SlideTransition
 import ui.screen.list.ListScreen
 
+@OptIn(ExperimentalVoyagerApi::class)
 @Composable
 internal fun AppNavigator() {
-    val viewModelOwnerProvider = remember { ViewModelNavigatorScreenLifecycleProvider() }
-    CompositionLocalProvider(LocalNavigatorScreenLifecycleProvider provides viewModelOwnerProvider) {
+    ProvideNavigatorLifecycleKMPSupport {
         Navigator(ListScreen()) { navigator ->
             Scaffold(
                 topBar = {
@@ -72,36 +63,4 @@ private fun TopBar(navigator: Navigator) {
             }
         }
     )
-}
-
-// Voyager support for Androidx ViewModel
-internal class ViewModelNavigatorScreenLifecycleProvider : NavigatorScreenLifecycleProvider {
-    override fun provide(screen: Screen): List<ScreenLifecycleContentProvider> =
-        listOf(ViewModelScreenLifecycleContentProvider(screen))
-}
-
-class ViewModelScreenLifecycleContentProvider(
-    private val screen: Screen
-) : ScreenLifecycleContentProvider {
-    @Composable
-    override fun ProvideBeforeScreenContent(
-        provideSaveableState: @Composable (suffixKey: String, content: @Composable () -> Unit) -> Unit,
-        content: @Composable () -> Unit
-    ) {
-        val viewModelStoreOwner = screen.rememberScreenModel { ViewModelStoreScreenModel() }
-        CompositionLocalProvider(LocalViewModelStoreOwner provides viewModelStoreOwner) {
-            content()
-        }
-    }
-}
-
-@PublishedApi
-internal class ViewModelStoreScreenModel : ScreenModel, ViewModelStoreOwner {
-
-    override val viewModelStore: ViewModelStore = ViewModelStore()
-
-    override fun onDispose() {
-        super.onDispose()
-        viewModelStore.clear()
-    }
 }
