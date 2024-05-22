@@ -10,7 +10,6 @@
 		058557BB273AAA24004C7B11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557BA273AAA24004C7B11 /* Assets.xcassets */; };
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
-		D12645DA2BE4494400E13A1D /* SwiftHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12645D92BE4494400E13A1D /* SwiftHelper.swift */; };
 		D17C13882BF38F0B001E5294 /* NativeViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17C13872BF38F0B001E5294 /* NativeViewFactory.swift */; };
 		D17C138D2BF39860001E5294 /* NativeMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17C138C2BF39860001E5294 /* NativeMapView.swift */; };
 		D17C13942BF3A8E6001E5294 /* RestaurantListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17C13932BF3A8E6001E5294 /* RestaurantListItemView.swift */; };
@@ -24,7 +23,6 @@
 		7555FF7B242A565900829871 /* Compose Codelab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Compose Codelab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB3632DC29227652001CCB65 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
-		D12645D92BE4494400E13A1D /* SwiftHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftHelper.swift; sourceTree = "<group>"; };
 		D17C13872BF38F0B001E5294 /* NativeViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeViewFactory.swift; sourceTree = "<group>"; };
 		D17C138C2BF39860001E5294 /* NativeMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeMapView.swift; sourceTree = "<group>"; };
 		D17C13932BF3A8E6001E5294 /* RestaurantListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListItemView.swift; sourceTree = "<group>"; };
@@ -84,7 +82,6 @@
 				7555FF8C242A565B00829871 /* Info.plist */,
 				2152FB032600AC8F00CF470E /* iOSApp.swift */,
 				058557D7273AAEEB004C7B11 /* Preview Content */,
-				D12645D92BE4494400E13A1D /* SwiftHelper.swift */,
 				D17C13872BF38F0B001E5294 /* NativeViewFactory.swift */,
 			);
 			path = iosApp;
@@ -212,7 +209,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
-				D12645DA2BE4494400E13A1D /* SwiftHelper.swift in Sources */,
 				D17C138D2BF39860001E5294 /* NativeMapView.swift in Sources */,
 				D17C13962BF3A922001E5294 /* ListScreenContentView.swift in Sources */,
 				D17C13942BF3A8E6001E5294 /* RestaurantListItemView.swift in Sources */,
