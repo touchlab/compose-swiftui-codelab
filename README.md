@@ -24,6 +24,10 @@ Once cloned, open the project in Android Studio. Wait for Gradle to complete syn
 
 Next, open `iosApp/iosApp.xcodeproj` in Xcode or execute in terminal `xed iosApp/`. Run the project in a real device or iOS Simulator.
 
+On Android, we will use Google Maps, it requires setup the Maps Key on the `gradle.properties`. [Google Maps Documentation for setup key](https://developers.google.com/maps/documentation/android-sdk/get-api-key)
+
+`MAPS_API_KEY=Your Api Key`
+
 ## Stack
 
 - [Compose KMP](https://github.com/JetBrains/compose-multiplatform)
